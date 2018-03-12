@@ -1,0 +1,10 @@
+training_data(in):kdd/num_norm_pca/train.csv 
+training_labels(in):kdd/lab_train.csv
+testing_data(in):kdd/num_norm_pca/test.csv
+testing_labels(in):kdd/lab_test.csv
+membership(out):kdd/num_norm_pca/out/membership_test.csv 
+thresholds(out):kdd/num_norm_pca/out/thresholds.csv 
+features_linked_to_thresholds(out):kdd/num_norm_pca/out/features.csv
+predictions(out):kdd/num_norm_pca/out/predictions_test.csv
+feature_importance(out):kdd/num_norm_pca/out/importance.csv
+feature_closest(out):kdd/num_norm_pca/out/featclosest_test.csv

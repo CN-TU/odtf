@@ -1,0 +1,3 @@
+labels:kdd/lab_test.csv
+membership:unsw/num_norm_pca/out/membership_test.csv 
+predictions:unsw/num_norm_pca/out/predictions_test.csv
