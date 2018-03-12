@@ -14,7 +14,9 @@
 
 ###  Reproducing experiments:
 
-Experiments from paper [1] can be reproduced with the following commands (Warning!: These operations will overwrite previous results stored in [out] subfolders):
+Experiments from paper [1] can be reproduced with the following commands: 
+**Warning: These operations will overwrite previous results stored in [out] subfolders!**
+**Pre-step: Extract "test.csv" and "train.csv" files from "test.csv.zip" and "train.csv.zip" from the desired subfolder before running the scripts!
 
 - *(KDD dataset) Calculating normal performances and one-class membership scores*
 ```
