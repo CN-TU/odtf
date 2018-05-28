@@ -21,17 +21,17 @@ for line in fileinput.input():
        config_files[name]=val.rstrip()
 
 print "Loading data..."
-# Loading the training dataset
+# Loading labels
 reader = csv.reader(open(config_files['labels'], "rb"), delimiter=",")
 aux = list(reader)
 lab = np.array(aux).astype("int")
 
-# Loading the labels of the training dataset 
+# Loading predictions 
 reader = csv.reader(open(config_files['predictions'], "rb"), delimiter=",")
 aux = list(reader)
 pred = np.array(aux).astype("int")
 
-# Loading the labels of the training dataset 
+# Loading membership levels
 reader = csv.reader(open(config_files['membership'], "rb"), delimiter=",")
 aux = list(reader)
 memb = np.array(aux).astype("float")
