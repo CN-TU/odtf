@@ -1,8 +1,12 @@
 # ODTF: one-class decision tree fuzzifier
 
+Designed/created by Félix Iglesias, TU Wien (Feb 2018)
+
+Refined/optimize by Matthias Katzengruber, TU Wien (May 2018)
+
 ### Scripts:
 
-- "ocdtfw.py" contains the one-class membership wrapper for decision trees.
+- "odtfw.py" contains the one-class membership wrapper for decision trees.
 
 - "memb_dist.py" calculates the distributions (with 10,50 and 90 quantiles/percentiles) of FNs, TNs, TPs and FPs.
 
@@ -22,7 +26,7 @@ Experiments from paper [1] can be reproduced with the following commands:
 
 - *(KDD dataset) Calculating normal performances and one-class membership scores*
 ```
-> python ocdtfw.py kdd/config_num_norm_pca_test.txt
+> python odtfw.py kdd/config_num_norm_pca_test.txt
 ```
 - *(KDD dataset) Showing membership score distributions of FPs, FNs, TPs and TNs*
 ```
@@ -30,12 +34,12 @@ Experiments from paper [1] can be reproduced with the following commands:
 ```
 - *(KDD dataset) Calculating performances using membership scores as an additional feature*
 ```
-> python ocdtfw.py kdd/config_num_norm_pca_with-memb_test.txt
+> python odtfw.py kdd/config_num_norm_pca_with-memb_test.txt
 ```
 
 - *(UNSW-NB15 dataset) Calculating normal performances and one-class membership scores*
 ```
-> python ocdtfw.py unsw/config_num_norm_pca_test.txt
+> python odtfw.py unsw/config_num_norm_pca_test.txt
 ```
 - *(UNSW-NB15 dataset) Showing membership score distributions of FPs, FNs, TPs and TNs*
 ```
@@ -43,14 +47,14 @@ Experiments from paper [1] can be reproduced with the following commands:
 ```
 - *(UNSW-NB15 dataset) Calculating performances using membership scores as an additional feature*
 ```
-> python ocdtfw.py unsw/config_num_norm_pca_with-memb_test.txt
+> python odtfw.py unsw/config_num_norm_pca_with-memb_test.txt
 ```
 
 To recalculate training data memberships, you can use the following commands for NSL-KDD and UNSW-NB15:
 ```
-> python ocdtfw.py kdd/config_num_norm_pca_train.txt
+> python odtfw.py kdd/config_num_norm_pca_train.txt
 
-> python ocdtfw.py unsw/config_num_norm_pca_train.txt
+> python odtfw.py unsw/config_num_norm_pca_train.txt
 ```
 ### References
 - [1] publication pending
