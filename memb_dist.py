@@ -21,17 +21,17 @@ for line in fileinput.input():
        config_files[name]=val.rstrip()
 
 print "Loading data..."
-# Loading labels
+# Loading the training dataset
 reader = csv.reader(open(config_files['labels'], "rb"), delimiter=",")
 aux = list(reader)
 lab = np.array(aux).astype("int")
 
-# Loading predictions 
+# Loading the labels of the training dataset 
 reader = csv.reader(open(config_files['predictions'], "rb"), delimiter=",")
 aux = list(reader)
 pred = np.array(aux).astype("int")
 
-# Loading membership levels
+# Loading the labels of the training dataset 
 reader = csv.reader(open(config_files['membership'], "rb"), delimiter=",")
 aux = list(reader)
 memb = np.array(aux).astype("float")
@@ -53,22 +53,22 @@ m_tn = np.take(memb, ind)
 ind = np.where(fn==1)
 m_fn = np.take(memb, ind)
 
-q10 = np.percentile(m_tp, 10, axis=1)
+q10 = np.percentile(m_tp, 25, axis=1)
 q50 = np.percentile(m_tp, 50, axis=1)
-q90 = np.percentile(m_tp, 90, axis=1)
-print ("TP -- q10: %s, q50: %s, q90: %s" % (q10[0], q50[0], q90[0]))
+q90 = np.percentile(m_tp, 75, axis=1)
+print ("TP -- q25: %s, q50: %s, q75: %s" % (q10[0], q50[0], q90[0]))
 
-q10 = np.percentile(m_fp, 10, axis=1)
+q10 = np.percentile(m_fp, 25, axis=1)
 q50 = np.percentile(m_fp, 50, axis=1)
-q90 = np.percentile(m_fp, 90, axis=1)
-print ("FP -- q10: %s, q50: %s, q90: %s" % (q10[0], q50[0], q90[0]))
+q90 = np.percentile(m_fp, 75, axis=1)
+print ("FP -- q25: %s, q50: %s, q75: %s" % (q10[0], q50[0], q90[0]))
 
-q10 = np.percentile(m_tn, 10, axis=1)
+q10 = np.percentile(m_tn, 25, axis=1)
 q50 = np.percentile(m_tn, 50, axis=1)
-q90 = np.percentile(m_tn, 90, axis=1)
-print ("TN -- q10: %s, q50: %s, q90: %s" % (q10[0], q50[0], q90[0]))
+q90 = np.percentile(m_tn, 75, axis=1)
+print ("TN -- q25: %s, q50: %s, q75: %s" % (q10[0], q50[0], q90[0]))
 
-q10 = np.percentile(m_fn, 10, axis=1)
+q10 = np.percentile(m_fn, 25, axis=1)
 q50 = np.percentile(m_fn, 50, axis=1)
-q90 = np.percentile(m_fn, 90, axis=1)
-print ("FN -- q10: %s, q50: %s, q90: %s" % (q10[0], q50[0], q90[0]))
+q90 = np.percentile(m_fn, 75, axis=1)
+print ("FN -- q25: %s, q50: %s, q75: %s" % (q10[0], q50[0], q90[0]))
