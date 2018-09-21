@@ -1,0 +1,3 @@
+data(in):unsw/num_norm_pca/train.csv 
+membership_scores(in):unsw/num_norm_pca/out/membership_train.csv
+data(out):unsw/num_norm_pca_with-memb/train.csv

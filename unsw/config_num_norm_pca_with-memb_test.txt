@@ -8,3 +8,4 @@ features_linked_to_thresholds(out):unsw/num_norm_pca_with-memb/out/features.csv
 predictions(out):unsw/num_norm_pca_with-memb/out/predictions_test.csv
 feature_importance(out):unsw/num_norm_pca_with-memb/out/importance.csv
 feature_closest(out):unsw/num_norm_pca_with-memb/out/featclosest_test.csv
+fuzzyfication:False

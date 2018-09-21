@@ -5,6 +5,6 @@ testing_labels(in):kdd/lab_train.csv
 membership(out):kdd/num_norm_pca/out/membership_train.csv 
 thresholds(out):kdd/num_norm_pca/out/thresholds.csv 
 features_linked_to_thresholds(out):kdd/num_norm_pca/out/features.csv
-predictions(out):kdd/num_norm_pca/out/predictions_test.csv
+predictions(out):kdd/num_norm_pca/out/predictions_train.csv
 feature_importance(out):kdd/num_norm_pca/out/importance.csv
 feature_closest(out):kdd/num_norm_pca/out/featclosest_train.csv

@@ -1,0 +1,3 @@
+data(in):kdd/num_norm_pca/test.csv 
+membership_scores(in):kdd/num_norm_pca/out/membership_test.csv
+data(out):kdd/num_norm_pca_with-memb/test.csv
