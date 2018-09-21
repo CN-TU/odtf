@@ -2,13 +2,16 @@
 
 Designed/created by Félix Iglesias, TU Wien (Feb 2018)
 
-Refined/optimize by Matthias Katzengruber, TU Wien (May 2018)
+Refined/optimized by Matthias Katzengruber, TU Wien (May 2018) and FI (Sep 2018)
 
 ### Scripts:
 
 - "odtfw.py" contains the one-class membership wrapper for decision trees.
 
 - "memb_dist.py" calculates the distributions (with 10,50 and 90 quantiles/percentiles) of FNs, TNs, TPs and FPs.
+
+- "addmembershipscore.py" adds membership scores to data as new predictors.
+
 
 ###  Available data:
 
@@ -22,39 +25,12 @@ Experiments from paper [1] can be reproduced with the following commands:
 
 **Warning: These operations will overwrite previous results stored in [out] subfolders!**
 
-**Pre-step: Extract "test.csv" and "train.csv" files from "test.csv.zip" and "train.csv.zip" from the desired subfolder before running the scripts!**
+```
+> bash extract.sh
 
-- *(KDD dataset) Calculating normal performances and one-class membership scores*
-```
-> python odtfw.py kdd/config_num_norm_pca_test.txt
-```
-- *(KDD dataset) Showing membership score distributions of FPs, FNs, TPs and TNs*
-```
-> python memb_dist.py kdd/config_membership_test.txt
-```
-- *(KDD dataset) Calculating performances using membership scores as an additional feature*
-```
-> python odtfw.py kdd/config_num_norm_pca_with-memb_test.txt
-```
+> bash ocdtfw_unsw_fullrun.sh > log_unsw.txt
 
-- *(UNSW-NB15 dataset) Calculating normal performances and one-class membership scores*
-```
-> python odtfw.py unsw/config_num_norm_pca_test.txt
-```
-- *(UNSW-NB15 dataset) Showing membership score distributions of FPs, FNs, TPs and TNs*
-```
-> python memb_dist.py unsw/config_membership_test.txt
-```
-- *(UNSW-NB15 dataset) Calculating performances using membership scores as an additional feature*
-```
-> python odtfw.py unsw/config_num_norm_pca_with-memb_test.txt
-```
-
-To recalculate training data memberships, you can use the following commands for NSL-KDD and UNSW-NB15:
-```
-> python odtfw.py kdd/config_num_norm_pca_train.txt
-
-> python odtfw.py unsw/config_num_norm_pca_train.txt
+> bash ocdtfw_kdd_fullrun.sh > log_kdd.txt
 ```
 ### References
 - [1] publication pending
